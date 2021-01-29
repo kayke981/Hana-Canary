@@ -17,4 +17,4 @@
 
 # Faq
 
-#### Minhas pastas e arquivos não são tão organizadas, então vai ficar um pouco ruim, então dentro do [Src](https://github.com/kayke981/hana-canary/tree/main/src), e dentro da pasta commands vão estar os comandos
+#### Minhas pastas e arquivos não são tão organizadas, então vai ficar um pouco ruim, então dentro do [Src](https://github.com/kayke981/HanaCanary/tree/main/src), e dentro da pasta commands vão estar os comandos
