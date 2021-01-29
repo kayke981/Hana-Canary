@@ -13,7 +13,7 @@
 
 ## Editor De Códogos
 
-#### Uso o [Vs code](https://code.visualstudio.com/) para editar os códigos, meesmo não tendo nenhuma hots
+#### Uso o [Vs code](https://code.visualstudio.com/) para editar os códigos, mesmo não tendo nenhuma host
 
 # Faq
 
