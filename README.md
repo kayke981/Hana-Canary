@@ -1,7 +1,7 @@
 # Hana-Canary
 # Sobre
 
-#### É um bot de testes, feito em [JavaScript](https://www.javascript.com/) usasndo [Node.js](https://nodejs.org/en/)
+#### É um bot de testes, feito em [JavaScript](https://www.javascript.com/) usando [Node.js](https://nodejs.org/en/)
 
 # Lib
 
