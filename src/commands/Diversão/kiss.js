@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const neko = require('neko.js');''
+const neko = require('neko.js');
 
 exports.run = async (client, message, args) => { 
 
