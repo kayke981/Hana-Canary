@@ -58,10 +58,10 @@ exports.run = async (client, message, args) => {
 			avatar: 'url'
 		})
 
-		.send(`${message.author}, ${random}`)
+		webhook.send(`${message.author}, ${random}`)
 
 		setTimeout(() => {
-			delete()
+			webhook.delete()
 		}, 2 * 1000)
 	}
 exports.config = {
