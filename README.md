@@ -11,7 +11,7 @@
 
 #### Atualmente usando [mongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=bing&utm_campaign=bs_americas_brazil_search_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=386028217&msclkid=e8b9fb14a76319885e2f9b00cb110b83)
 
-## Editor De Códogos
+## Editor De Códigos
 
 #### Uso o [Vs code](https://code.visualstudio.com/) para editar os códigos, mesmo não tendo nenhuma host
 
