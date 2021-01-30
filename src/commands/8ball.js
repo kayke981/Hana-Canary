@@ -54,14 +54,14 @@ exports.run = async (client, message, args) => {
 		if(!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.inlineReply(perms)
 
 		
-		const gru = await message.channel.createWebhook('gru', {
-			avatar: 'https://cdn.discordapp.com/attachments/778116989167992852/803813949069066240/OIP.png'
+		const webhook = await message.channel.createWebhook('qualquer-nome', {
+			avatar: 'url'
 		})
 
-		gru.send(`${message.author}, ${random}`)
+		.send(`${message.author}, ${random}`)
 
 		setTimeout(() => {
-			gru.delete()
+			delete()
 		}, 2 * 1000)
 	}
 exports.config = {
