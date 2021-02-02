@@ -23,7 +23,7 @@
 
 #### Primeiro passo, instale o [Node.js](https://nodejs.org/en/), depois de instalar, abra o seu [Vs code](https://code.visualstudio.com/), abra o terminal, e escreva
 ```
-npm i -y init
+npm init -y
 ```
 
 #### Depois disso, escreva isso no terminal
