@@ -1,4 +1,4 @@
-# Hana-Canary
+# Hana Canary
 # Sobre
 
 #### É um bot de testes, feito em [JavaScript](https://www.javascript.com/) usando [Node.js](https://nodejs.org/en/)
@@ -32,7 +32,7 @@ npm i -y init
 npm i --save discord.js
 ````
 
-#### Lembra-se que toda vez que toda vez que você queira dar npm em um package, para não ir la no `package.json`, escreva `--save` antes do nome do package, exemplo:
+#### Lembra-se que toda vez que você queira dar npm em um package, para não ir la no `package.json`, escreva `--save` antes do nome do package, exemplo:
 ```
 npm i --save canvas
 ```
