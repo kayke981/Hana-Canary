@@ -18,3 +18,25 @@
 # Faq
 
 #### Minhas pastas e arquivos não são tão organizadas, então vai ficar um pouco ruim, então dentro do [Src](https://github.com/kayke981/HanaCanary/tree/main/src), e dentro da pasta commands vão estar os comandos
+
+# Fazendo bots em [Vs code](https://code.visualstudio.com/)
+
+#### Primeiro passo, instale o [Node.js](https://nodejs.org/en/), depois de instalar, abra o seu [Vs code](https://code.visualstudio.com/), abra o terminal, e escreva
+```
+npm i -y init
+```
+
+#### Depois disso, escreva isso no terminal
+
+```
+npm i --save discord.js
+````
+
+#### Lembra-se que toda vez que toda vez que você queira dar npm em um package, para não ir la no `package.json`, escreva `--save` antes do nome do package, exemplo:
+```
+npm i --save canvas
+```
+
+#### Caso não saíba [Discord.js](https://discord.js.org/?source=post_page---------------------------#/), vá em alguns sites que vou deixar abaixo
+- **[Discord.js Guide](https://discordjs.guide/)**
+- **[Discord.js Org](https://discord.js.org/?source=post_page---------------------------#/)**
