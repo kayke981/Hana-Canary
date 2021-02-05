@@ -30,10 +30,10 @@ fs.readdir("./commands/", (err, files) => {
   cmds.forEach(i => {
    table.addRow(i.n, i.name, i.ali)
   })
-  console.log(table.toString().cyan)
+  console.log(colors.cyan(table.toString()))
 
   const {channel} = require(`./index.js`);
-  const webhook = new Discord.WebhookClient('id', 'token');
+  const webhook = new Discord.WebhookClient('803633539853189190', 'ziQeFgwjQw1OJQuj-NJnDp5oVJt7dcCYW6tp8oYJXLFGRHp79EVixucEeSBU-cKeyvdF');
   
   const embed = new Discord.MessageEmbed()
   .setTitle(`**Hana Canary**`)
