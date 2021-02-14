@@ -19,7 +19,7 @@
 
 #### Minhas pastas e arquivos não são tão organizadas, então vai ficar um pouco ruim, então dentro do [Src](https://github.com/kayke981/HanaCanary/tree/main/src), e dentro da pasta commands vão estar os comandos
 
-# Fazendo bots em [Vs code](https://code.visualstudio.com/)
+# Fazendo bots no [Vs code](https://code.visualstudio.com/)
 
 #### Primeiro passo, instale o [Node.js](https://nodejs.org/en/), depois de instalar, abra o seu [Vs code](https://code.visualstudio.com/), abra o terminal, e escreva
 ```
