@@ -1,6 +1,5 @@
 const fs = require('fs');
 const Asciitable = require('ascii-table');
-const Discord = require('discord.js');
 
  let cmds = []
  const colors = require('colors')
@@ -31,16 +30,6 @@ fs.readdir("./commands/", (err, files) => {
    table.addRow(i.n, i.name, i.ali)
   })
   console.log(colors.cyan(table.toString()))
-
-  const {channel} = require(`./index.js`);
-  const webhook = new Discord.WebhookClient('803633539853189190', 'ziQeFgwjQw1OJQuj-NJnDp5oVJt7dcCYW6tp8oYJXLFGRHp79EVixucEeSBU-cKeyvdF');
-  
-  const embed = new Discord.MessageEmbed()
-  .setTitle(`**Hana Canary**`)
-  .setDescription(`**[COMMANDS] comandos carregados**`)
-  .setColor(`#FF0000`)
-  
-  webhook.send(embed)
 
 });
 
