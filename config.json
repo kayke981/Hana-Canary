@@ -1,0 +1,8 @@
+{
+"prefix": "prefixo",
+"token": "token do bot",
+    "mongo": "link da mongo",
+    "color": "cor",
+    "versão": "versão",
+    "shards": "total de shards"
+}
