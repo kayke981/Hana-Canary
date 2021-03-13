@@ -36,8 +36,9 @@ if(!args.length) return message.channel.send("Da um eval ai meu patrão")
         
         message.channel.send(embedEval)
     
-    } catch(e) {      
-    message.channel.send(`\`\`\`js\n${e}\n\`\`\``);   
+    } catch(e) {
+        const brReg = new RegExp(`\n`);
+    message.channel.send(`\`\`\`diff\n- ${e.message.replace(brReg, '\n- ')}\n\`\`\``);   
     };
 
 }
