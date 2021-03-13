@@ -41,7 +41,7 @@ let pull = require(`../src/commands/${f}`)
     return frase;
 }
 
-exports.getCategory = function(category) {
+exports.getCategory = function(category, str = `{cmd}`) {
 
  let arr = [];
 const files = fs.readdirSync("./src/commands")
@@ -53,7 +53,7 @@ const pull = require(`./commands/${f}`)
  if(c !== category) return; 
 else 
 { 
-arr.push(`\`${pull.config.name}\``) 
+arr.push(str.replace(/{cmd}/ig, pull.config.commands)) 
 }
 })
 return arr;
