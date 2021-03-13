@@ -12,7 +12,7 @@ module.exports = (client) => {
     .setDescription(`<:user:793984556197740606> <a:SH_da_seta:783516413448159313> Olá ${message.author}!\n
 <:information:793890482068914228> <a:SH_da_seta:783516413448159313> Meu prefixo é \`${config.prefix}\``)
     .setColor(config.color)
-    message.channel.send(embed);
+    message.inlineReply(embed);
   }
   })
 }
