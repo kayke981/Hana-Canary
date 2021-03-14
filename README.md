@@ -40,3 +40,5 @@ npm i --save canvas
 #### Caso não saíba [Discord.js](https://discord.js.org/?source=post_page---------------------------#/), vá em alguns sites que vou deixar abaixo
 - **[Discord.js Guide](https://discordjs.guide/)**
 - **[Discord.js Org](https://discord.js.org/?source=post_page---------------------------#/)**
+### Meu nick do discord
+`kayake#0001`
