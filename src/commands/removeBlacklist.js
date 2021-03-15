@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
         }
 
    await client.db.pull(`blacklist`, pessoa.id)
-    await client.db.delete(`motivo`, pessoa.id)
+    await client.db.delete(`motivo-${pessoa.id}`)
 
     message.inlineReply(`O usuário ${pessoa.id}\`(${pessoa.tag})\` pode me usar novamente`)
 
