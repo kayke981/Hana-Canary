@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
         }
     
    await client.db.push(`blacklist`, pessoa.id)
-   await client.db.set(`motivo`, motivo)
+   await client.db.set(`motivo-${pessoa.id}`, motivo)
     
     message.inlineReply(`O usuário ${pessoa.id}\`(${pessoa.tag})\` foi proibido de me usar`)
     
