@@ -1,44 +1,27 @@
 # Hana Canary
-# Sobre
 
-#### É um bot de testes, feito em [JavaScript](https://www.javascript.com/) usando [Node.js](https://nodejs.org/en/)
+## 🤔 **What is Canary?**
 
-# Lib
+> **`Canary is a test version for bots, so instead of using the MAIN bot one uses the Canary version to do tests`**
 
-#### livraria usada é [Discord.js](https://discord.js.org/?source=post_page---------------------------#/)
+## 📚 **Which lib did you use, and what programming language?**
 
-# DataBases
+> **`I use`** **[Discord.js](https://discord.js.org/#/)**, **`and the programming language is`** **[JavaScript](https://www.javascript.com/)** **`using`** **[NodeJs](https://nodejs.org/en/)**
 
-#### Atualmente usando [mongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=bing&utm_campaign=bs_americas_brazil_search_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=386028217&msclkid=e8b9fb14a76319885e2f9b00cb110b83)
+## 📊 **Where do you host your bot?**
 
-## Editor De Códigos
+> **`I host my bot on`** **[DanBot Hosting](https://panel.danbot.host)**
 
-#### Uso o [Vs code](https://code.visualstudio.com/) para editar os códigos, mesmo não tendo nenhuma host
+## ❓ **Why doesn't the codes work**
 
-# Faq
+> **`I can't explain why, but .... add me so I can try to help you, my nick on discord is kayake#0001`**
 
-#### Minhas pastas e arquivos não são tão organizadas, então vai ficar um pouco ruim, então dentro do [Src](https://github.com/kayke981/HanaCanary/tree/main/src), e dentro da pasta commands vão estar os comandos
+## 🗃 **Which DataBase do you use?**
 
-# Fazendo bots no [Vs code](https://code.visualstudio.com/)
+> **`I use the`** **[MongoDB Altas](https://www.mongodb.com/cloud/atlas)** **`database, and I use the`** **[quickmongo](https://www.npmjs.com/package/quickmongo)** **`lib`**
 
-#### Primeiro passo, instale o [Node.js](https://nodejs.org/en/), depois de instalar, abra o seu [Vs code](https://code.visualstudio.com/), abra o terminal, e escreva
-```
-npm init -y
-```
+## 🌐 **My social platforms**
 
-#### Depois disso, escreva isso no terminal
+🐦 • [Twitter](https://twitter.com/Kayake14)
 
-```
-npm i --save discord.js
-````
-
-#### Lembra-se que toda vez que você queira dar npm em um package, para não ir la no `package.json`, escreva `--save` antes do nome do package, exemplo:
-```
-npm i --save canvas
-```
-
-#### Caso não saíba [Discord.js](https://discord.js.org/?source=post_page---------------------------#/), vá em alguns sites que vou deixar abaixo
-- **[Discord.js Guide](https://discordjs.guide/)**
-- **[Discord.js Org](https://discord.js.org/?source=post_page---------------------------#/)**
-### Meu nick do discord
-`kayake#0001`
+🎥 • [Youtube](https://youtube.com/channel/UCcUPiVsABC_Ko65QFpiNh8Q)
