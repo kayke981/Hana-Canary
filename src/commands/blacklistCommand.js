@@ -9,6 +9,8 @@ exports.run = async (client, message, args) => {
     
    let botban = await client.db.get(`blacklist`)
    
+   let botperm = await client.db.get(`botperm`)
+   
    if(!botban) {
        client.db.push(`blacklist`, client.user.id)
        }
@@ -33,6 +35,12 @@ exports.run = async (client, message, args) => {
    await client.db.set(`motivo-${pessoa.id}`, motivo)
     
     message.inlineReply(`O usuário ${pessoa.id}\`(${pessoa.tag})\` foi proibido de me usar`)
+    
+    if(botperm.includes(pessoa.id)) {
+      client.db.pull(`botperm`, pessoa.id)
+        
+        message.inlineReply(`O usuário ${pessoa.id}\`(${pessoa.tag})\`não possui mais permissão para o eval`)
+       }
     
     
     }
