@@ -38,7 +38,7 @@ if(commandFile) {
     .setTimestamp()
     .setColor(config.color)
     
-    client.channels.cache.get("818539587538386964").send(embed)
+    client.channels.cache.get("id do canal").send(embed)
 commandFile.run(client, message, args);
 }
 });
