@@ -11,7 +11,7 @@ module.exports = async (client) => {
     .setFooter(`ID ${message.author.id}, tag ${message.author.tag}`)
     .setTimestamp()
     .setColor(config.color)
-    client.channels.cache.get("821547129859604490").send(DM)
+    client.channels.cache.get("id do canal").send(DM)
     });
     }
 //n recomendo por causa do MASS DM
