@@ -14,3 +14,4 @@ module.exports = async (client) => {
     client.channels.cache.get("821547129859604490").send(DM)
     });
     }
+//n recomendo por causa do MASS DM
