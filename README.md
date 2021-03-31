@@ -14,7 +14,7 @@
 
 ## ❓ **Why doesn't the codes work**
 
-> **`I can't explain why, but .... add me so I can try to help you, my nick on discord is kayake#0001`**
+> **`I can't explain why, but .... add me so I can try to help you, my nick on discord is kayake#8506`**
 
 ## 🗃 **Which DataBase do you use?**
 
