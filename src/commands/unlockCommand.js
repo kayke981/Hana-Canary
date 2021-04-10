@@ -6,9 +6,9 @@ const Discord = require('discord.js');
     if(!message.guild.me.hasPermission("MANAGE_GUILD")) return message.inlineReply(`Eu não tenho permissão de \`Gerenciar Servidor\``)
 
     
-    message.channel.createOverwrite(message.guild.id, { SEND_MESSAGES: null, reason: `comando usado por ${message.author.tag}, ID: ${message.author.id}`})
+    message.channel.createOverwrite(message.guild.id, { SEND_MESSAGES: true, reason: `comando usado por ${message.author.tag}, ID: ${message.author.id}`})
 
-    message.inlineReply(`:unlock: | ${message.author} Canal Desbloqueado, para bloquear use hc!lock`)
+    message.inlineReply(`:unlock: ****|**** ${message.author} Canal Desbloqueado, para bloquear use hc!lock`)
 };
 exports.config = {
     name: 'unlock',
