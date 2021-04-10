@@ -1,8 +1,6 @@
 //dependências
 const Discord = require('discord.js');
-const client = new Discord.Client({
-    shardCount: 1
-    });
+const client = new Discord.Client()
 //clients
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
