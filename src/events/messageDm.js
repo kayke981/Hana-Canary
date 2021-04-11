@@ -17,7 +17,11 @@ module.exports = async (client) => {
     .setFooter(`ID ${message.author.id}, tag ${message.author.tag}`)
     .setTimestamp()
     .setColor(config.color)
-    client.channels.cache.get("id").send(DM);
+    const channel = client.channels.cache.get('id');
+        
+     if(channel !== undefined || channel !== null) {
+     channel.send(DM)
+     } else return console.log('id errado')
         
     lastMessages.set('lastMessage', {
     content: message.content
