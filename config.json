@@ -4,5 +4,6 @@
     "mongo": "link da mongo",
     "color": "cor",
     "versão": "versão",
-    "shards": "total de shards"
+    "shards": "total de shards",
+    "dmLog": "id"
 }
