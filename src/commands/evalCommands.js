@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../config.json');
-
+const regConfig = new RegExp(Object.values(config).join('|'), 'ig')
 exports.run = async (client, message, args) => {
     
     let botperm = await client.db.get(`botperm`)
@@ -30,7 +30,7 @@ if(!args.length) return message.channel.send("Da um eval ai meu patrão")
     depth: 0 
     });      
         const embedEval = new Discord.MessageEmbed()    
-    .setDescription(`📩 Entrada \`\`\`js\n${args.join(" ")}\`\`\`\n🚩 Saída \`\`\`js\n${code.slice(0, 1010)}\n\`\`\``)
+    .setDescription(`📩 Entrada \`\`\`js\n${args.join(" ")}\`\`\`\n🚩 Saída \`\`\`js\n${code.slice(0, 1010).replace(regConfig, '')}\n\`\`\``)
         .setColor(config.color)
         .setFooter(`Versão ${config.versão} • shards ${config.shards}`)
         
