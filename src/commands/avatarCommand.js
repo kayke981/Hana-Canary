@@ -3,7 +3,7 @@ const config = require('../../config.json');
 
 exports.run = async (client, message, args) => {
   
-let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author
+let user = message.mentions.users.first() || (!isNaN(args[0])? await client.users.fetch(args[0]) : message.author);
 
 let avatar = user.avatarURL({size: 4096, dynamic: true, format: 'png'})
   
