@@ -7,11 +7,7 @@ let user = message.mentions.users.first() || client.users.cache.get(args[0]) || 
 
 let avatar = user.avatarURL({size: 4096, dynamic: true, format: 'png'})
   
-  let descrição = `**Clique [aqui](${avatar}) para baixar**`
-
-  if(user.id.includes(client.user.id)) {
-  descrição = `**Clique [aqui](${avatar}) para baixar** \n **Eu sei que eu sou linda :3**`;
-      }
+  let descrição = user.id === client.user.id? `**Clique [aqui](${avatar}) para baixar** \n **Eu sei que eu sou linda :3**` : `**Clique [aqui](${avatar}) para baixar**`
 
   let embed = new Discord.MessageEmbed() 
     .setColor(config.color) 
