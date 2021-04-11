@@ -5,5 +5,8 @@
     "color": "cor",
     "versão": "versão",
     "shards": "total de shards",
-    "dmLog": "id"
+    "dmLog": "id",
+    "frases": {
+    "welcome": "peaceHolders: {member}, {@member}, {guild}, {guild.id}, {memberCounter} e {botCounter} ex: bem-vindo {@member} ao {guild}! agora temos {memberCounter} membros, {botCounter} bots"
+    }
 }
