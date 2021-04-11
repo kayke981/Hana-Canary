@@ -17,7 +17,7 @@ module.exports = async (client) => {
     .setFooter(`ID ${message.author.id}, tag ${message.author.tag}`)
     .setTimestamp()
     .setColor(config.color)
-    const channel = client.channels.cache.get('id');
+    const channel = client.channels.cache.get(config.dmLog);
         
      if(channel !== undefined || channel !== null) {
      channel.send(DM)
