@@ -43,7 +43,7 @@ timeout: Date.now() + 3210
         }
     
     if(botban.includes(message.author.id)) return;
-    if(!client.cooldown.has(message.author.id).timeout) {
+    if(!client.cooldown.get(message.author.id).timeout) {
 const args = message.content        .trim()        .slice(config.prefix.length)        .split(/ +/g);    
 const command = args.shift().toLowerCase();   
 const commandFile = client.commands.get(command) || client.commands.get(client.aliases.get(command));
