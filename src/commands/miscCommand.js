@@ -3,7 +3,7 @@ const {color, prefix} = require('../../config.json');
 
 exports.run = async (client, message, args) => {
     
-    if(!args[0]) return message.inlineReply(`${message.author}, tem dois tipos de comandos, ${prefix}misc pause, ${prefix}misc resume`)
+    if(!args[0]) return message.inlineReply(`${message.author}, tem dois tipos de comandos, ${prefix}misc pause, ${prefix}misc resume, ${prefix}volume`)
 
     if(args[0] === 'pause' || args[0] === 'pausa') {
         const embed = new Discord.MessageEmbed()
