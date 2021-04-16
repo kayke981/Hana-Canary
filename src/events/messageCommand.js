@@ -9,6 +9,30 @@ if (message.channel.type == 'dm') return;
 if (!message.content.toLowerCase().startsWith(config.prefix)) return;
     //verificar se tomou ban no bot
     
+if(client.cooldown.has(message.author.id)) {
+
+let authorTime = client.cooldown.get(message.author.id);
+
+if(Date.now() >= authorTime.timeout) {
+
+    client.cooldown.delete(message.author.id)
+
+} else {
+
+let time = ms(authorTime.timeout - (Date.now() - authorTime.date))
+
+ return message.inlineReply(`😑 calma, faltam **${time.seconds} segundos** restantes para usar o comando`)
+}
+
+} else {
+
+  client.cooldown.set(message.author.id, {
+date: Date.now(),
+timeout: Date.now() + 3210//10000 + client.cooldown.has(message.author.id)
+
+});
+}
+
     const cmds = message.content.split(' ')[0].slice(config.prefix.length)
         const {bestMatch} = stringS.findBestMatch(cmds, client.commands.map((a) => a.config.name))
         
@@ -20,7 +44,7 @@ if (!message.content.toLowerCase().startsWith(config.prefix)) return;
         }
     
     if(botban.includes(message.author.id)) return;
-    
+    if(client.cooldown.has(message.author.id)) {
 const args = message.content        .trim()        .slice(config.prefix.length)        .split(/ +/g);    
 const command = args.shift().toLowerCase();   
 const commandFile = client.commands.get(command) || client.commands.get(client.aliases.get(command));
@@ -40,6 +64,7 @@ if(commandFile) {
     
     client.channels.cache.get("id do canal").send(embed)
 commandFile.run(client, message, args);
+}
 }
 });
 
