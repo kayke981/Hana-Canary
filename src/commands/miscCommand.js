@@ -47,19 +47,6 @@ if(message.guild.me.voice.channel && message.member.voice.channel !== message.gu
         client.player.setVolume(message, parseInt(volumeArgs))
     message.inlineReply(message.author, volume)
     };
-    if(args[0] === 'loop') {
-        if(!client.player.isPlaying(message)) return message.inlineReply(`Não estou tocando nada`) 
-       let loopArgs = args[1];
-        if(!loopArgs) return message.inlineReply(`use ${prefix}misc loop <on/off>`)
-        if(loopArgs !== 'off' || loopArgs !== 'on') return message.inlineReply('Coloque on ou off')
-        if(message.guild.me.voice.channel && message.member.voice.channel !== message.guild.me.voice.channel) return message.channel.send("Você não está no mesmo canal de voz que eu")
-        const loopMessage = new Discord.MessageEmbed()
-        .setDescription(`A [${client.player.getQueue(message).playing.title}](${client.player.getQueue(message).playing.title}) está com loop ${loopArgs}`)
-        .setColor(color)
-        
-        client.player.setRepeatMode(message, loopArgs.replace('on', false).replace('off', false))
-        message.inlineReply(message.author, loopMessage)
-    }
 }
 exports.config = {
     name: "misc",
