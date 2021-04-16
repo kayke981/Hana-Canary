@@ -28,8 +28,7 @@ let time = ms(authorTime.timeout - (Date.now() - authorTime.date))
 
   client.cooldown.set(message.author.id, {
 date: Date.now(),
-timeout: Date.now() + 3210//10000 + client.cooldown.has(message.author.id)
-
+timeout: Date.now() + 3210
 });
 }
 
