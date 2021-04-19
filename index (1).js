@@ -1,14 +1,7 @@
 //dependências
 const {color} = require('./config.json');
 const Discord = require('discord.js');
-const client = new Discord.Client({
-
-//restTimeOffset: 1,
-//ws: {
-   //intents: 1539
-// }
-    
-});
+const client = new Discord.Client();
 const { Player } = require("discord-player")
 const player = new Player(client);
 const { GiveawaysManager } = require('discord-giveaways');
