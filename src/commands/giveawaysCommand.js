@@ -4,7 +4,7 @@ const {color} = require('../../config.json');
 
 exports.run = async (client, message, args) => {
   
-    let canal = (client.channels.cache.size > 2?client.channels.cache.map((a) => a)[2]:'#canal-que-você-quiser')
+    let canal = (client.channels.cache.size > 2?client.channels.cache.map((a) => a)[2]:message.channel)
     
     const embed = new Discord.MessageEmbed()
     .setTitle(`**Ajuda giveaway**`)
