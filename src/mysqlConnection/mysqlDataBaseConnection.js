@@ -26,7 +26,7 @@ return;
 } 
 console.log(c.green('[CLUSTER CONNECTED] cluster conectado')) 
 })
-poolCluster.getConnection('Hana', function(err, err) { 
+poolCluster.getConnection('NOME', function(err, err) { 
 if(err) { 
 console.error(c.red('erro ao conectar ao cluster', err.stack)) 
 return; 
