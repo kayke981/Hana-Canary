@@ -43,6 +43,8 @@ require('./loader/db.js')(client)
 
 require('./hanaPlayers/player.js')(client)
 
+require('./src/mysqlConnection/mysqlDatBaseConnection')(client)
+
 //https://github.com/yADGithub foi onde eu peguei o handler de eventos e a db.js :)
 client.login(config.token).catch(err => {
     console.log(err.code)
