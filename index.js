@@ -25,7 +25,7 @@ client.aliases = new Discord.Collection();
 client.player = player;
 client.cooldowns = new Discord.Collection();
 client.giveawaysManager = manager;
-client.gatilhos = new Discord.Collection()
+client.gatilhos = new Discord.Collection();
 
 
 //arquivos
