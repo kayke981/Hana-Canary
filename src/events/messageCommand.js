@@ -9,6 +9,44 @@ if (message.channel.type == 'dm') return;
 if (!message.content.toLowerCase().startsWith(config.prefix)) return;
     //verificar se tomou ban no bot
 
+connection.query(`SELECT * FROM conta WHERE id = '${message.author.id}'`, (err, rows) => {
+
+if(!rows[0]) {
+let sql;
+let ID = message.author.id
+connection.query(`SELECT * FROM conta WHERE id = '${message.author.id}'`, (err, rows) => {
+if(err) {
+console.log(err)
+}
+if(rows.length < 1) {
+sql = `INSERT INTO conta (id) VALUES('${message.author.id}')`
+}
+connection.query(sql, (err) => {
+if(err) console.log(err)
+});
+});
+};
+});
+
+connection.query(`SELECT * FROM guild WHERE id = '${message.guild.id}'`, (err, rows) => {
+
+if(!rows[0]) {
+let sql;
+let ID = message.guild.id
+connection.query(`SELECT * FROM guild WHERE id = '${message.guild.id}'`, (err, rows) => {
+if(err) {
+console.log(err)
+}
+if(rows.length < 1) {
+sql = `INSERT INTO guild VALUES('${message.guild.id}')`
+}
+connection.query(sql, (err) => {
+if(err) console.log(err)
+});
+});
+};
+});
+
     const cmds = message.content.split(' ')[0].slice(config.prefix.length)
         const {bestMatch} = stringS.findBestMatch(cmds, client.commands.map((a) => a.config.name))
         
