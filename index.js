@@ -38,13 +38,13 @@ const handler = require('./handler/handler.js')
 handler.loadCommand(client.commands, client.aliases, 'comando de nº{number} carregado: ${cmd}')
 
 //carregar os arquivos aqui
-require('./loader/event.js')(client)
+require('./loader/events.js')(client)
 
 require('./loader/db.js')(client)
 
 require('./hanaPlayers/player.js')(client)
 
-require('./src/mysqlConnection/mysqlDatBaseConnection')(client)
+require('./src/mysqlConnection/mysqlDataBaseConnection')(client)
 
 //https://github.com/yADGithub foi onde eu peguei o handler de eventos e a db.js :)
 client.login(config.token).catch(err => {
