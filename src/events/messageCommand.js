@@ -8,29 +8,6 @@ if (message.author.bot) return;
 if (message.channel.type == 'dm') return;
 if (!message.content.toLowerCase().startsWith(config.prefix)) return;
     //verificar se tomou ban no bot
-    
-if(client.cooldown.has(message.author.id)) {
-
-let authorTime = client.cooldown.get(message.author.id);
-
-if(Date.now() >= authorTime.timeout) {
-
-    client.cooldown.delete(message.author.id)
-
-} else {
-
-let time = ms(authorTime.timeout - (Date.now() - authorTime.date))
-
- return message.inlineReply(`😑 calma, faltam **${time.seconds} segundos** restantes para usar o comando`)
-}
-
-} else {
-
-  client.cooldown.set(message.author.id, {
-date: Date.now(),
-timeout: Date.now() + 3210
-});
-}
 
     const cmds = message.content.split(' ')[0].slice(config.prefix.length)
         const {bestMatch} = stringS.findBestMatch(cmds, client.commands.map((a) => a.config.name))
@@ -52,6 +29,41 @@ const commandFile = client.commands.get(command) || client.commands.get(client.a
             if(cmds.includes("@everyone")) return;
             if(cmds.includes('`')) return;
             if(!commandFile) return message.channel.send(`o comando \`${cmds}\` não existe, mas você não quis dizer \`${bestMatch.target}\``)
+
+if (!client.cooldowns. has(commandFile.name)) {
+client.cooldowns.set(commandFile.name, new Discord.Collection());
+}
+const now = Date.now();
+const timestamps = client.cooldowns.get(commandFile.name);
+const cooldownAmoun = (5) * 1000;
+let cooldownAmount = (timestamps.has(message. author.id)? (Number(cooldownAmoun)) + 4000:coo
+if (timestamps.has(message. author.id)) {
+const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+if (now < expirationTime) {
+if(client.gatilhos.has(message. author.id)) {
+let time = client.gatilhos.get(message. author.id)
+if(time > 35) {
+client.gatilhos.delete(message.author.id)
+await client.db.set('motivo-${message.author.id}', 'fez uma raid no bot para t
+await client.db.push("blacklist', message.author.id)
+let motivo = await client.db.get('motivo-${message author.id}')
+return message.author.send("**Você foi banida(o) de me usar, provalvelmente você fe
+comandos meus e etc..., o motivo do ban foi \ '${motivo}\'\nE sim, foi permanente o ban**')
+}
+}
+let quantidade = (client.gatilhos.has(message.author.id)?client.gatilhos.get(message.
+client.gatilhos.set(message. author.id, quantidade + 1)
+const timeLeft = (expirationTime - now) / 1000;
+return message. inlineReply **|** você está usando comando rápido demais, espere ${ti
+segundos)
+}
+}
+timestamps.set(message. author.id, now);
+setTimeout(( => timestamps.delete(message. author.id), cooldown Amount);
+setTimeout(( => {
+client.gatilhos.delete(message author.id)
+}, 120000);
+
 if(commandFile) {
     
     const embed = new Discord.MessageEmbed()
