@@ -23,8 +23,9 @@ const manager = new GiveawaysManager(client, {
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.player = player;
-client.cooldown = new Discord.Collection();
+client.cooldowns = new Discord.Collection();
 client.giveawaysManager = manager;
+client.gatilhos = new Discord.Collection()
 
 
 //arquivos
