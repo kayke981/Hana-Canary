@@ -7,15 +7,6 @@ client.on('message', async (message) => {
 const connection = client.mysql()
 if (message.author.bot) return;    
 if (message.channel.type == 'dm') return;
-if(message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) { 
-            let botba = await client.db.get(`blacklist`)
-           if(botba.includes(message.author.id)) return;
-const embed = new Discord.MessageEmbed() 
-.setTitle('<:paste:794205638120570911> <a:SH_da_seta:783516413448159313> Prefixo') 
-.setDescription(`<:user:793984556197740606> <a:SH_da_seta:783516413448159313> Olá ${message.author}!\n<:information:793890482068914228> <a:SH_da_seta:783516413448159313> Meu prefixo é \`${config.prefix}\``)
-.setColor(config.color)
-message.channel.send(embed); 
-};
 if (!message.content.toLowerCase().startsWith(config.prefix)) return;
     //verificar se tomou ban no bot
 
