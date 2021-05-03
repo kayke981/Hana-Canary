@@ -25,7 +25,7 @@ if(err) console.log(err)
     
     let icon = (!guild.iconURL()?'https://cdn.discordapp.com/attachments/795130563916595270/838503065836584960/PSX_20210502_165304.jpg':guild.iconURL())
     
-    client.shard.broadcastEval(`let channel = this.channels.cache.get("818539587538386964")
+    client.shard.broadcastEval(`let channel = this.channels.cache.get("id do canal")
 
 let embed = {
 color: "#b600ff",
