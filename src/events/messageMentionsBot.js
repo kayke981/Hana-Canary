@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../config.json');
+const mention = 'menção';
 
 
 module.exports = (client) => {
@@ -8,14 +9,14 @@ module.exports = (client) => {
     if(message.author.bot) return;
 let botban = await client.db.get(`blacklist`)
 if(!botban.includes(message.author.id)) return;
-if (!client.cooldowns.has(commandFile.name)) {
-            client.cooldowns.set(commandFile.name, new Discord.Collection());
+if (!client.cooldowns.has(mention)) {
+            client.cooldowns.set(mention, new Discord.Collection());
 
         }
 
         const now = Date.now(); 
 
-        const timestamps = client.cooldowns.get(commandFile.name); 
+        const timestamps = client.cooldowns.get(mention); 
 
         const cooldownAmoun = (5) * 1000;
         let cooldownAmount = (timestamps.has(message.author.id)? (Number(cooldownAmoun)) + 4000:cooldownAmoun)
