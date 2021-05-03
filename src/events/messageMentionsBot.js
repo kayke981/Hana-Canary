@@ -6,6 +6,8 @@ module.exports = (client) => {
   client.on('message', (message) => {
     if(message.channel.type == 'dm') return;
     if(message.author.bot) return;
+let botban = await client.db.get(`blacklist`)
+if(!botban.includes(message.author.id)) return;
 if (!client.cooldowns.has(commandFile.name)) {
             client.cooldowns.set(commandFile.name, new Discord.Collection());
 
