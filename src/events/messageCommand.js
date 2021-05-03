@@ -86,14 +86,38 @@ if (!client.cooldowns.has(commandFile.name)) {
 
 if(commandFile) {
     
-    const embed = new Discord.MessageEmbed()
-    .setAuthor(`Log de comandos | ${message.guild.name}(${message.guild.id})`, message.guild.iconURL())
-    .setDescription(`**Usuário:**\n\`${message.author.tag}(${message.author.id})\`\n**Comando usado**\n\`${message.content}\``)
-    .setFooter(`ID ${message.author.id}`)
-    .setTimestamp()
-    .setColor(config.color)
+    let icon = (!message.guild.iconURL()?'https://cdn.discordapp.com/attachments/795130563916595270/838503065836584960/PSX_20210502_165304.jpg':message.guild.iconURL())
     
-    client.channels.cache.get("id do canal").send(embed)
+    client.shard.broadcastEval(`let channel = this.channels.cache.get("id do canal")
+
+let embed = {
+color: "#b600ff",
+author: {
+ name: \`Log de comandos | (${message.guild.name}/${message.guild.id})\`,
+icon_url: \`${icon}\`,
+},
+thumbnail: {
+url: \`${icon}\`,
+},
+fields: [
+{
+name: \`Usuário:\`,
+value: \`(\\\`${message.author.tag}/${message.author.id}\\\`)\`,
+},
+{
+name: \`Comando usado:\`,
+value: \`${message.content}\`,
+},
+],
+timestamp: new Date(),
+footer: {
+text: \`${message.author.id}\`,
+icon_url: \`${message.author.avatarURL()}\`, 	
+},
+}
+
+channel.send({embed: embed })`, 2)
+    
 commandFile.run(client, message, args);
 }
 }
