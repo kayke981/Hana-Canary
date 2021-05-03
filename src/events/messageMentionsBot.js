@@ -8,7 +8,9 @@ module.exports = (client) => {
     if(message.channel.type == 'dm') return;
     if(message.author.bot) return;
 let botban = await client.db.get(`blacklist`)
-if(!botban.includes(message.author.id)) return;
+if(botban.includes(message.author.id)) return;
+if(message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) {
+
 if (!client.cooldowns.has(mention)) {
             client.cooldowns.set(mention, new Discord.Collection());
 
@@ -59,15 +61,13 @@ if (!client.cooldowns.has(mention)) {
 
             client.gatilhos.delete(message.author.id)
         }, 120000);
-        
-  if(message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) {
-    const embed = new Discord.MessageEmbed()
+const embed = new Discord.MessageEmbed()
     .setTitle('<:paste:794205638120570911> <a:SH_da_seta:783516413448159313> Prefixo')
     .setDescription(`<:user:793984556197740606> <a:SH_da_seta:783516413448159313> Olá ${message.author}!\n
 <:information:793890482068914228> <a:SH_da_seta:783516413448159313> Meu prefixo é \`${config.prefix}\``)
     .setColor(config.color)
     message.inlineReply(embed);
-  }
+        }
   })
 }
 
