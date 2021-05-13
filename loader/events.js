@@ -11,4 +11,4 @@ module.exports = (client) => {
     });  
                                                                             });
 };
-//do ADG, https://github.con/yADGithub
+//do ADG, https://github.com/yADGithub
