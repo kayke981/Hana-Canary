@@ -1,17 +1,14 @@
-const config = require("./config.json");
+const { token } = require("./config.json");
 
-const {ShardingManager} = require('discord.js');
+const { ShardingManager } = require('discord.js');
 
-try {
 const manager = new ShardingManager('./index.js', {
-totalShards: 4, 
-token: config.token
-});
+  totalShards: 4, 
+  token: token
+})
 
 manager.on('shardCreate', shard => {
-console.log(`[SHARD] Iniciando shard ${shard.id}`)
-});
-manager.spawn();
-} catch (err) {
-    console.log('erro' + err)
-}
+  console.log(`[SHARD] Iniciando shard ${shard.id}`)
+})
+
+manager.spawn().catch(e => console.log("Erro " + e))
