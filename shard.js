@@ -1,10 +1,10 @@
-const config = require("./config.json");
+const { token } = require("./config.json");
 
 const { ShardingManager } = require('discord.js');
 
 const manager = new ShardingManager('./index.js', {
   totalShards: 4, 
-  token: config.token
+  token: token
 })
 
 manager.on('shardCreate', shard => {
