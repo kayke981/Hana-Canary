@@ -30,7 +30,7 @@ function Presence() {
         client.user.setActivity(base)
     } 
     Presence();
-    }, 2520)
+    }, 4000 /* bota entre 3000 e 6000*/)
   		client.user.setStatus('online').catch(console.error);	console.log(brightRed(`---------------------------[CONNECTED]---------------------------`));
         });
           };
