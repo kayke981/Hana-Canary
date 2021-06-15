@@ -11,7 +11,7 @@ guildSchema.findOneAndDelete({ Guild: guild.id }, async (err, data) => {
     
     client.shard.broadcastEval(`
 (async () => {
-let channel = this.channels.cache.get("818539587538386964")
+let channel = this.channels.cache.get("id do canal")
 const webhooks = await channel.fetchWebhooks(); 		
 const webhook = webhooks.first();
 
