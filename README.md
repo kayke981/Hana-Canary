@@ -10,7 +10,7 @@
 
 ## 📊 **Where do you host your bot?**
 
-> **`I host my bot on`** **[DanBot Hosting](https://panel.danbot.host)**
+> **`I host my bot on`** **[Quack Host](https://client.quackhost.uk/)**
 
 ## ❓ **Why doesn't the codes work**
 
