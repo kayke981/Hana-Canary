@@ -1,0 +1,11 @@
+{
+"prefix": "prefixo",
+"token": "token",
+    "mongo": "url",
+    "color": "cor",
+    "versão": "versão",
+    "shards": "shards",
+    "frases": {  
+    "welcome": "bem-vindo {@member} ao {guild}! agora temos {memberCount} membros, {botCount} bots"    
+     }
+}
