@@ -32,7 +32,7 @@ client.giveawaysManager.start(channel, {
         giveaway: '🎉🎉 **Sorteio Começou** 🎉🎉',
         giveawayEnded: '🎉🎉 **Sorteio terminou** 🎉🎉',
         timeRemaining: 'Tempo faltando: **{duration}**!',
-        inviteToParticipate: 'Reaga com 🥳 para participar',
+        inviteToParticipate: 'Reaja com 🥳 para participar',
         winMessage: 'Parabéns, {winners}! Você ganhou **{prize}**!\n{messageURL}',
         embedFooter: 'Sorteios',
         noWinner: 'Sorteio foi cancelado por não ter um número de participantes válido',
