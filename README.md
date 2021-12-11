@@ -1,4 +1,4 @@
-# Hana Canary
+# `[[DEPRECATED]` Hana Canary
 
 ## 🤔 **What is Canary?**
 
